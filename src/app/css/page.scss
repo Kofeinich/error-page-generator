@@ -1,0 +1,57 @@
+@import 'switch-button.css';
+
+@mixin th($theme-name, $font-color, $font-primary-color, $background-color ) {
+  .#{$theme-name} {
+
+    .home-page {
+      width: 100vw;
+      height: 100vh;
+      margin: auto;
+      color: $font-color;
+      background: $background-color;
+
+      h1 {
+        font-size: 220%
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 30%
+      }
+
+      .nav-bar {
+        width: 100%;
+        display: flex;
+        height: 60px;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .logo-wrapper{
+        width: 50%;
+        margin: auto;
+      }
+
+      .description {
+        width: 75%;
+        margin: auto;
+        text-align: center;
+      }
+
+      @media (min-width: 720px) {
+        h1 {
+          font-size: 320%
+        }
+      }
+      @media (max-width: 400px) {
+        h1 {
+          font-size: 170%
+        }
+      }
+    }
+  }
+}
+
+@include th(dark, rgba(196, 195, 195, 0.99), #338eb7, rgba(0, 0, 0, 0.8));
+@include th(light, rgba(0, 0, 0, 0.62), #b22a2a, rgba(255, 255, 255, 0.99));
